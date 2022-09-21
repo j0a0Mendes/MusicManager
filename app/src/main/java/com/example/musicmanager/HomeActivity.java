@@ -45,12 +45,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationBarView
         bottomNavigationView.setOnItemSelectedListener(this);
         getSupportFragmentManager().beginTransaction().replace(R.id.container, homeFragment).commit();
 
-
-
-
     }
-
-
 
 
     @Override
