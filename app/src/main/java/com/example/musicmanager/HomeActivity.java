@@ -28,6 +28,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationBarView
     BottomNavigationView bottomNavigationView;
     HomeFragment homeFragment = new HomeFragment();
     ProfileFragment profileFragment = new ProfileFragment();
+    SearchFragment searchFragment = new SearchFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,14 +38,12 @@ public class HomeActivity extends AppCompatActivity implements NavigationBarView
         //setContentView(binding.getRoot());
         setContentView(R.layout.activity_home);
 
-
         //setSupportActionBar(binding.toolbar);
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.home);
         bottomNavigationView.setOnItemSelectedListener(this);
         getSupportFragmentManager().beginTransaction().replace(R.id.container, homeFragment).commit();
-
     }
 
 
@@ -56,10 +55,12 @@ public class HomeActivity extends AppCompatActivity implements NavigationBarView
             case R.id.home:
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, homeFragment).commit();
                 return true;
+            case R.id.search:
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, searchFragment).commit();
+                return true;
             case R.id.profile:
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, profileFragment).commit();
                 return true;
-
         }
         return false;
     }
