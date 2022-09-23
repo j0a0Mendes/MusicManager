@@ -14,7 +14,9 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:text="Good day user!"
-        android:textSize="20dp"
+        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
